@@ -9,8 +9,8 @@
         height:450px;
         display: flex;
         position: absolute;
-        left: 0;
-
+        left: 0vw;
+      
         .container{
             width: 100vw;
             display: flex;
@@ -39,9 +39,9 @@
                         display: flex;
                         width: 90%;
                         height: 70%;
+                        gap: 15px;
                         flex-direction: column;
-                      
-                        justify-content: space-between;
+                        justify-content: center;
                         
                         .imgcontainer{
                             width: 50px;
@@ -81,7 +81,7 @@
                     overflow-y: hidden;
 
                     img{
-                        width: 400px;
+                        width:500px;
                         height: 100%;
                         transform: rotate(-10deg);
                     }
@@ -90,7 +90,36 @@
             
         }
     }
+    .leftarrow{
+
+
+        .leftside{
+        color: black;
+        position: absolute;
+        left: 10px;
+        
+        transform: rotate(180deg);
+
+        img{
+            color:black;
+            width: 50px;
+        }
+        }
     
+    }
+    .rightarrow{
+        
+        
+        .rightside{
+        position: absolute;
+        right: 10px;
+
+        img{
+            color:black;
+            width: 50px;
+        }
+        }
+    }
 
     
 }

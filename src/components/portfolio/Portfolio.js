@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 import Portfoliolist from "../portfoliolist/Portfoliolist"
 import "./portfoli.scss"
+import {featuredPortfolio,webPortfolio,mobilePortfolio,designPortfolio,contentPortfolio} from "../../data"
+import { useEffect } from 'react'
 function Portfolio() {
   const [selected,setSelected]=useState("Featured")
+  const [data,setData]=useState([])
   const list = [{
     id:"Featured",
     title:"Featured",
   },
   {
-    id:"Web App",
+    id:"Web",
     title:"Web App",
   },
   {
-    id:"Mobile app",
+    id:"Mobile",
     title:"Mobile app",
   },
   {
@@ -24,6 +27,28 @@ function Portfolio() {
     title:"Content",
   }]
   
+  useEffect(()=>{
+    switch(selected){
+      case "Featured":
+        setData(featuredPortfolio)
+        break;
+        case "Web":
+        setData(webPortfolio)
+        break;
+        case "Mobile":
+        setData(mobilePortfolio)
+        break;
+        case "Design":
+        setData(designPortfolio)
+        break;
+        case "Content":
+        setData(contentPortfolio)
+        break;
+        default:
+          setData(featuredPortfolio)
+    }
+
+  },[selected])
   return (
     <div className='portfolio' id='Portfolio'>
     <h1>Portfolio</h1>
@@ -38,31 +63,21 @@ function Portfolio() {
     }</ul>
    
      <div className="container">
-      <div className="item">
-        <img src="images/interior.png"  className='img' alt="" />
-        <h3>Banking App</h3>
-      </div>
-      <div className="item">
-        <img src="images/interior.png"  className='img' alt="" />
-        <h3>Banking App</h3>
-      </div>
-      <div className="item">
-        <img src="images/interior.png"  className='img' alt="" />
-        <h3>Banking App</h3>
-      </div>
-      <div className="item">
-        <img src="images/interior.png"  className='img' alt="" />
-        <h3>Banking App</h3>
-      </div>
-      <div className="item">
-        <img src="images/interior.png"  className='img' alt="" />
-        <h3>Banking App</h3>
-      </div>
-      <div className="item">
-        <img src="images/interior.png"  className='img' alt="" />
-        <h3>Banking App</h3>
-      </div>
       
+      {
+        data.map((d)=>{
+          return<>
+          <div className="item">
+          <img src={d.img}  className='img' alt="" />
+          <h3>{d.title}</h3>
+          </div>
+          
+          </>
+          
+        })
+      }
+        
+
      </div>
     </div>
   )
