@@ -6,10 +6,11 @@
     align-items: center;
 
     .slider{
-        height:450px;
+        height:550px;
         display: flex;
         position: absolute;
         left: 0vw;
+        transition: 1.5s ease-in-out;
       
         .container{
             width: 100vw;
@@ -19,14 +20,14 @@
 
             .item{
                 
-                width: 850px;
+                width: 950px;
                 height: 100%;
                 background-color: white;
                 border-radius: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
+              
                 .left{
                     flex: 4;
                     height: 100%;
@@ -63,13 +64,13 @@
 
                         }
                         h1{
-                            font-size: 25px;
+                            font-size: 35px;
                          }
                          p{
-                            font-size: 12px;
+                            font-size: 18px;
                          }
                          span{
-                            font-size: 18px;
+                            font-size: 25px;
                             font-weight: 700;
                          }
                     }
@@ -83,7 +84,7 @@
                     img{
                         width:500px;
                         height: 100%;
-                        transform: rotate(-10deg);
+                        // transform: rotate(-10deg);
                     }
                 }
             }
@@ -96,13 +97,13 @@
         .leftside{
         color: black;
         position: absolute;
-        left: 10px;
+        left: 5%;
         
         transform: rotate(180deg);
 
         img{
             color:black;
-            width: 50px;
+            width: 60px;
         }
         }
     
@@ -112,11 +113,11 @@
         
         .rightside{
         position: absolute;
-        right: 10px;
+        right: 5%;
 
         img{
             color:black;
-            width: 50px;
+            width: 60px;
         }
         }
     }
