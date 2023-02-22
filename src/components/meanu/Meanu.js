@@ -13,7 +13,7 @@ function Meanu({meanu,setMeanu}) {
         </li> 
         <li onClick={()=>setMeanu(false)}>
         
-            <a href="#Textimonials">Textimonials</a>
+            <a href="#Textimonial">Textimonials</a>
         </li> 
         <li onClick={()=>setMeanu(false)}>
             <a href="#Work">Wrok</a>
