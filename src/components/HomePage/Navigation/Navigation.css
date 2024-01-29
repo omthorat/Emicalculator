@@ -1,0 +1,22 @@
+.navbar{
+    background-color: #ff5d4c;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    font-family: "Raleway",Arial,san-serif;
+}
+.navlogo{
+    background:none;
+}
+.logo{
+    width: 100%;
+    height: 80px;
+    
+    mix-blend-mode:hard-light;
+   
+}
+.logo:hover{
+mix-blend-mode:luminosity; 
+}
